@@ -13,5 +13,7 @@
 		"Lukasz 'Severiaan' Grela, extended by Kerri-anne Ellis" 
 	],
     "license": "GPL-3.0",
-    "homepage": "https://github.com/commelius/adapt-scenario-branching"
+    "homepage": "https://github.com/commelius/adapt-scenario-branching",
+    "extension" : "scenario",
+    "targetAttribute": "_scenario"
 }
