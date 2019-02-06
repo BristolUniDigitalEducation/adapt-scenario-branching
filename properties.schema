@@ -64,7 +64,7 @@
                   "inputType": { "type": "Boolean", "options": [false, true]},
                   "validators": []
                 },
-                "userAnswer": {
+                "_userAnswer": {
                   "type": "array",
                   "required": false,
                   "title": "Answers",
