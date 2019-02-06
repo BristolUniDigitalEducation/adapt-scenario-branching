@@ -1,0 +1,100 @@
+{
+  "type": "object",
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "http://jsonschema.net",
+  "required": false,
+  "globals": {},
+  "properties": {
+    "pluginLocations": {
+      "type": "object",
+      "required": true,
+      "properties": {
+        "config": {
+          "type": "object"
+        },
+	  "contentobject": {
+		  "type": "object"
+        },
+        "article": {
+          "type": "object"
+        },
+        "block": {
+          "type": "object",
+          "properties": {
+            "_scenario": {
+              "type": "object",
+              "required": false,
+              "legend": "Scenario Branching",
+              "properties": {
+                "_isEnabled": {
+                  "type": "boolean",
+                  "default": false,
+                  "title": "Enable Scenario Branching",
+                  "inputType": "Checkbox",
+                  "help": "help"
+                },
+                "questionId": {
+                  "type": "string",
+                  "default": "",
+                  "require": true,
+                  "title": "Question ID",
+                  "inputType": "Text",
+                  "help": "help"
+                },
+                "incorrect": {
+                  "type": "string",
+                  "default": "",
+                  "require": false,
+                  "title": "Incorrect",
+                  "inputType": "Text",
+                  "help": "help"
+                },
+                "correct": {
+                  "type": "string",
+                  "default": "",
+                  "require": false,
+                  "title": "Correct",
+                  "inputType": "Text",
+                  "help": "help"
+                },
+                "forceCompletion": {
+                  "type":"boolean",
+                  "required":false,
+                  "title": "Force Completion",
+                  "inputType": { "type": "Boolean", "options": [false, true]},
+                  "validators": []
+                },
+                "userAnswer": {
+                  "type": "array",
+                  "required": false,
+                  "title": "Answers",
+                  "items": {
+                    "type": "object",
+                    "required": false,
+                    "properties": {
+                      "title": {
+                        "type": "string",
+                        "required": false,
+                        "inputType": "Text",
+                        "title": "Component id (or ids)",
+                        "default": "",
+                        "validators": [],
+                        "help": "This is the component id (or comma separated ids)"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "component": {
+          "type": "object"
+        },
+        "course": {
+          "type": "object"
+        }
+      }
+    }
+  }
+}
